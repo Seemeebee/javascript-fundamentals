@@ -7,22 +7,21 @@
 
 /** EXERCISE 1: THE GLOBAL BEACON **/
 
-// TODO: Declare a global constant on the line below named 
+// TODO: Declare a global constant on the line below named
 // 'STATION_ID' and set it to "Tycho".
 
 function broadcastBeacon() {
-    // TODO: Inside this function, log "Broadcasting from: (station id)".
+	// TODO: Inside this function, log `Broadcasting from: ${STATION_ID}`.
 }
 
 // TODO: Run the program to verify the scope is valid.
 broadcastBeacon();
 
-
 /** EXERCISE 2: ISOLATING RADIATION **/
 
 function reactorRoom() {
-    let radiationLevel = "CRITICAL";
-    console.log("Inside reactor room: " + radiationLevel);
+	let radiationLevel = "CRITICAL";
+	console.log(`Inside reactor room: ${radiationLevel}`);
 }
 
 reactorRoom();
@@ -31,40 +30,38 @@ reactorRoom();
     TODO: Uncomment the line below and run the script. 
     Observe the error, then comment it out again to fix the program.
 */
-// console.log("Bridge check: " + radiationLevel); 
-
+// console.log("Bridge check: " + radiationLevel);
 
 /** EXERCISE 3: LOOP SHADOWS **/
 
 let sensorSectors = ["A", "B", "C"];
 
 for (let i = 0; i < sensorSectors.length; i++) {
-    let sectorMessage = "Scanning Sector " + sensorSectors[i];
-    console.log(sectorMessage);
+	let sectorMessage = `Scanning Sector ${sensorSectors[i]}`;
+	console.log(sectorMessage);
 }
 
 /*
     TODO: Why will the line below crash the program? 
     Answer in a comment, then make sure the code remains commented out.
 */
-// console.log(sectorMessage); 
-
+// console.log(sectorMessage);
 
 /** EXERCISE 4: SCOPE MIXER **/
 
 let totalWaterReserves = 500; // Global variable (Metric Tons)
 
 function consumeWater(amountNeeded) {
-    let standardLossFactor = 1.05;
-    
-    // TODO: Create a variable, finalDeduction, to store 
-    // the calculation of the amount needed multiplied by
-    // the standard loss factor
-    
-    // TODO: Modify the global variable totalWaterReserves by
-    // subtracting the final deduction
+	let standardLossFactor = 1.05;
+
+	// TODO: Create a variable, finalDeduction, to store
+	// the calculation of the amount needed multiplied by
+	// the standard loss factor
+
+	// TODO: Modify the global variable totalWaterReserves by
+	// subtracting the final deduction
 }
 
 consumeWater(100);
 
-// TODO: Print a sentence that verifies the new value of totalWaterReserves
+// TODO: Print a sentence that verifies the new value of totalWaterReserves using a template literal

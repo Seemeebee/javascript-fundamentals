@@ -21,42 +21,43 @@
     closer to the Base Case.
 */
 
-/** EXAMPLE 1 - THE RADAR PING TRAVERSAL (Countdown) **/ 
+/** EXAMPLE 1 - THE RADAR PING TRAVERSAL (Countdown) **/
 
 // Simulating a radar signal traveling through space, losing strength
 function broadcastRadarPing(signalStrength) {
-    // 1. BASE CASE: If signal strength drops to 0, stop broadcasting
-    if (signalStrength <= 0) {
-        console.log("Signal lost in the vacuum of space.");
-        return; 
-    }
-    
-    // Action: Log the current signal strength in decibel-milliwatts
-    console.log("Ping transmitted... Signal Strength: " + signalStrength + "dBm");
-    
-    // 2. RECURSIVE CASE: Call the function again with a smaller strength
-    broadcastRadarPing(signalStrength - 20);
+	// 1. BASE CASE: If signal strength drops to 0, stop broadcasting
+	if (signalStrength <= 0) {
+		console.log("Signal lost in the vacuum of space.");
+		return;
+	}
+
+	// Action: Log the current signal strength in decibel-milliwatts
+	console.log(`Ping transmitted... Signal Strength: ${signalStrength}dBm`);
+
+	// 2. RECURSIVE CASE: Call the function again with a smaller strength
+	broadcastRadarPing(signalStrength - 20);
 }
 
 // Start a ping at 60dBm strength
 broadcastRadarPing(60);
 
-
 /** EXAMPLE 2 - DIVIDE AND CONQUER (Grid Sub-division) **/
 
 // Simulating search-and-rescue teams splitting up grid sectors
 function scanGridSector(sectorSizeKm) {
-    // BASE CASE: Sector is small enough for a single drone to scan
-    if (sectorSizeKm <= 5) {
-        console.log(`Drone deployed to scan final ${sectorSizeKm}km localized area.`);
-        return;
-    }
-    
-    // RECURSIVE CASE: Sector is too big. Split it in half and send teams.
-    let subSectorSize = sectorSizeKm / 2;
-    console.log(`Sector size ${sectorSizeKm}km too large. Sub-dividing into two ${subSectorSize}km zones...`);
-    
-    scanGridSector(subSectorSize); // Scan first sub-zone
+	// BASE CASE: Sector is small enough for a single drone to scan
+	if (sectorSizeKm <= 5) {
+		console.log(`Drone deployed to scan final ${sectorSizeKm}km localized area.`);
+		return;
+	}
+
+	// RECURSIVE CASE: Sector is too big. Split it in half and send teams.
+	let subSectorSize = sectorSizeKm / 2;
+	console.log(
+		`Sector size ${sectorSizeKm}km too large. Sub-dividing into two ${subSectorSize}km zones...`
+	);
+
+	scanGridSector(subSectorSize); // Scan first sub-zone
 }
 
 scanGridSector(20);

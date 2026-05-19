@@ -16,18 +16,18 @@
 */
 
 function calculateHoursToDecay(currentVelocity, threshold) {
-    // Base Case
-    if (currentVelocity <= threshold) {
-        return 0;
-    }
+	// Base Case
+	if (currentVelocity <= threshold) {
+		return 0;
+	}
 
-    // Reduce velocity for the next hour
-    let newVelocity = currentVelocity * 0.9;
+	// Reduce velocity for the next hour
+	let newVelocity = currentVelocity * 0.9;
 
-    // Recursive Case: Return this hour (1) + all subsequent hours calculated
-    return 1 + calculateHoursToDecay(newVelocity, threshold);
+	// Recursive Case: Return this hour (1) + all subsequent hours calculated
+	return 1 + calculateHoursToDecay(newVelocity, threshold);
 }
 
 // Test case: Starting at 80 km/h, counting hours until it hits 50 km/h
 let hoursRequired = calculateHoursToDecay(80, 50);
-console.log("Orbit will decay to safe speeds in: " + hoursRequired + " hours."); // 5 hours
+console.log(`Orbit will decay to safe speeds in: ${hoursRequired} hours.`); // 5 hours

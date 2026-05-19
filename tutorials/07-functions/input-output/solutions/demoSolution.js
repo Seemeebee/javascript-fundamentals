@@ -22,11 +22,11 @@
     that function will run.
 */
 
-/** EXAMPLE 1 - PARAMETERS & ARGUMENTS **/ 
+/** EXAMPLE 1 - PARAMETERS & ARGUMENTS **/
 
 // 'crewName' is the parameter (the variable placeholder)
 function welcomeCrewMember(crewName) {
-    console.log("Welcome back to the bridge, " + crewName + ".");
+	console.log(`Welcome back to the bridge, ${crewName}.`);
 }
 
 // "Holden" and "Alex" are the arguments (the real data)
@@ -36,9 +36,9 @@ welcomeCrewMember("Alex");
 /** EXAMPLE 2 - MULTIPLE INPUTS **/
 
 function calculateVelocity(distance, time) {
-    console.log("Calculating speed for " + distance + " meters over " + time + " seconds...");
-    let speed = distance / time;
-    console.log("Velocity: " + speed + " m/s");
+	console.log(`Calculating speed for ${distance} meters over ${time} seconds...`);
+	let speed = distance / time;
+	console.log(`Velocity: ${speed} m/s`);
 }
 
 calculateVelocity(100, 10); // Order matters! distance = 100, time = 10
@@ -47,13 +47,12 @@ calculateVelocity(100, 10); // Order matters! distance = 100, time = 10
 
 // Inputs and outputs are measured in Metric Tons (t)
 function synthesizeWaterReactionMass(hydrogenTons, oxygenTons) {
-    let waterCompound = hydrogenTons + oxygenTons;
-    return waterCompound; // Sends the total tonnage back to the ship's computer
-    
-    console.log("This will never print!"); // Unreachable code due to return
+	let waterCompound = hydrogenTons + oxygenTons;
+	return waterCompound; // Sends the total tonnage back to the ship's computer
+
+	console.log("This will never print!"); // Unreachable code due to return
 }
 
 // Capturing the output: 50t of Hydrogen combined with 25t of Oxygen
 let currentReactionMass = synthesizeWaterReactionMass(50, 25);
-console.log("Drive Reserves Updated: " + currentReactionMass + " metric tons of H2O loaded."); 
-// Output: Drive Reserves Updated: 75 metric tons of H2O loaded.
+console.log(`Drive Reserves Updated: ${currentReactionMass} metric tons of H2O loaded.`);

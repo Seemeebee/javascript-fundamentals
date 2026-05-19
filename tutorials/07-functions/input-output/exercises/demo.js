@@ -1,17 +1,5 @@
 /**** FUNCTION INPUT & OUTPUT ****/
 
-/*
-    To make a function truly reusable, it needs to accept inputs and generate outputs.
-
-    Parameters: These are the placeholder variables defined in the function's declaration. They act like empty slots waiting to be filled.
-
-    Arguments: This is the actual data you pass into those slots when you invoke (call) the function.
-
-    The return Keyword: Functions naturally execute code, but once they finish, they evaluate to undefined unless you explicitly tell them to send a value back using return. Think of return as the conveyor belt that sends the finished product out of the function factory so it can be saved into a variable.
-
-    The Stop Rule: As soon as a function hits a return statement, it terminates immediately. No code below a return statement inside that function will run.
-*/
-
 /** EXAMPLE 1 - PARAMETERS & ARGUMENTS **/ 
 
 // DEMO: Define a function to greet a crew member'crewName' is the parameter (the variable placeholder)

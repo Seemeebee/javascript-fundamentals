@@ -18,13 +18,13 @@
     brackets.
 */
 
-/** EXAMPLE 1 - GLOBAL SCOPE **/ 
+/** EXAMPLE 1 - GLOBAL SCOPE **/
 
 // Accessible anywhere in the entire program
-let shipName = "Rocinante"; 
+let shipName = "Rocinante";
 
 function displayShipName() {
-    console.log("Transmitting identity: " + shipName); // Works!
+	console.log(`Transmitting identity: ${shipName}`); // Works!
 }
 displayShipName();
 
@@ -32,19 +32,19 @@ displayShipName();
 
 // 'incomingWaterTons' is a parameter. It acts EXACTLY like a local variable!
 function processDriveCoolant(incomingWaterTons) {
-    let conversionFactor = 0.85; // Another local variable
-    
-    // We can use both local variables freely inside here
-    let activeCoolantTons = incomingWaterTons * conversionFactor;
-    console.log("Coolant active in core: " + activeCoolantTons + " t");
+	let conversionFactor = 0.85; // Another local variable
+
+	// We can use both local variables freely inside here
+	let activeCoolantTons = incomingWaterTons * conversionFactor;
+	console.log(`Coolant active in core: ${activeCoolantTons} t`);
 }
 
 processDriveCoolant(100);
 
-// console.log(incomingWaterTons); 
+// console.log(incomingWaterTons);
 // ❌ ERROR: incomingWaterTons is not defined (parameters vanish outside the function!)
 
-// console.log(conversionFactor); 
+// console.log(conversionFactor);
 // ❌ ERROR: conversionFactor is not defined (local variables vanish outside the function!)
 
 /** EXAMPLE 3 - BLOCK SCOPE (Loops & Conditions) **/
@@ -52,11 +52,11 @@ processDriveCoolant(100);
 let fuelPods = [20, 40, 10];
 
 for (let i = 0; i < fuelPods.length; i++) {
-    let temporaryCalculation = fuelPods[i] * 1.1; // Block scoped to this loop
-    console.log("Pod adjusted weight: " + temporaryCalculation + " t");
+	let temporaryCalculation = fuelPods[i] * 1.1; // Block scoped to this loop
+	console.log(`Pod adjusted weight: ${temporaryCalculation} t`);
 }
 
-// console.log(i); 
+// console.log(i);
 // ❌ ERROR: 'i' only exists inside the loop block
-// console.log(temporaryCalculation); 
+// console.log(temporaryCalculation);
 // ❌ ERROR: 'temporaryCalculation' vanished when the loop ended

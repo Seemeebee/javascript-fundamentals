@@ -14,11 +14,10 @@
     Invoke the function passing "G" as the argument.
 */
 function reportSectorStatus(sectorLetter) {
-    console.log("Warning: High radiation levels detected in Sector " + sectorLetter);
+	console.log(`Warning: High radiation levels detected in Sector ${sectorLetter}`);
 }
 
 reportSectorStatus("G");
-
 
 /** EXERCISE 2: SHIELD POWER ESTIMATOR **/
 
@@ -29,9 +28,8 @@ reportSectorStatus("G");
     Do not call the function yet.
 */
 function calculateShieldPower(basePower, boostFactor) {
-    return basePower * boostFactor;
+	return basePower * boostFactor;
 }
-
 
 /** EXERCISE 3: CAPTURING SHIELD OUTPUT **/
 
@@ -42,8 +40,7 @@ function calculateShieldPower(basePower, boostFactor) {
     Log 'TOTAL_SHIELD' to the console.
 */
 const TOTAL_SHIELD = calculateShieldPower(50, 3);
-console.log("Total Shield Strength: " + TOTAL_SHIELD); // 150
-
+console.log(`Total Shield Strength: ${TOTAL_SHIELD}`); // 150
 
 /** EXERCISE 4: THE IS-EMPTY CHECKER **/
 
@@ -54,12 +51,12 @@ console.log("Total Shield Strength: " + TOTAL_SHIELD); // 150
     Test the output of your function with different values using console.log.
 */
 function isTankEmpty(fuelLevel) {
-    if (fuelLevel === 0) {
-        return true;
-    } else {
-        return false;
-    }
+	if (fuelLevel === 0) {
+		return true;
+	} else {
+		return false;
+	}
 }
 
-console.log("Is tank empty? " + isTankEmpty(0)); // true
-console.log("Is tank empty? " + isTankEmpty(45)); // false
+console.log(`Is tank empty? ${isTankEmpty(0)}`); // true
+console.log(`Is tank empty? ${isTankEmpty(45)}`); // false

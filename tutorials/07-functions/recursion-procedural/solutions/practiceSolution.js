@@ -14,12 +14,12 @@
     3. Recursive Case: Call 'launchCountdown' with seconds - 1.
 */
 function launchCountdown(seconds) {
-    if (seconds === 0) {
-        console.log("Ignition!");
-        return;
-    }
-    console.log("T-Minus " + seconds);
-    launchCountdown(seconds - 1);
+	if (seconds === 0) {
+		console.log("Ignition!");
+		return;
+	}
+	console.log(`T-Minus ${seconds}`);
+	launchCountdown(seconds - 1);
 }
 
 launchCountdown(3);
@@ -33,16 +33,15 @@ launchCountdown(3);
     3. Recursive Case: Call 'drillForIce', increasing currentDepth by 5.
 */
 function drillForIce(currentDepth, targetDepth) {
-    if (currentDepth >= targetDepth) {
-        console.log("Water ice vein reached!");
-        return;
-    }
-    console.log("Drilling... currently at " + currentDepth + " meters.");
-    drillForIce(currentDepth + 5, targetDepth);
+	if (currentDepth >= targetDepth) {
+		console.log("Water ice vein reached!");
+		return;
+	}
+	console.log(`Drilling... currently at ${currentDepth} meters.`);
+	drillForIce(currentDepth + 5, targetDepth);
 }
 
 drillForIce(0, 15);
-
 
 /** EXERCISE 3: REPAIRING THE RECURSIVE LOOP **/
 
@@ -51,14 +50,14 @@ drillForIce(0, 15);
     Fix the code so that it correctly stops when fuel hits 0.
 */
 function consumeThrusterFuel(fuelAmount) {
-    // FIX: Added the base case to stop the recursion
-    if (fuelAmount <= 0) {
-        console.log("Thruster depleted. Burn complete.");
-        return;
-    }
-    
-    console.log("Burning thrusters... Fuel left: " + fuelAmount + " t");
-    consumeThrusterFuel(fuelAmount - 10);
+	// FIX: Added the base case to stop the recursion
+	if (fuelAmount <= 0) {
+		console.log("Thruster depleted. Burn complete.");
+		return;
+	}
+
+	console.log(`Burning thrusters... Fuel left: ${fuelAmount} t`);
+	consumeThrusterFuel(fuelAmount - 10);
 }
 
 consumeThrusterFuel(30);

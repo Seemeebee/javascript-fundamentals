@@ -25,21 +25,21 @@
 
 /** EXAMPLE - FUNCTIONAL REDUCTION **/
 
-// A ship has connected modular cargo cargo pods. Each pod knows its own mass 
+// A ship has connected modular cargo cargo pods. Each pod knows its own mass
 // and points to the next connected pod's mass in an array index.
 let podWeights = [12, 8, 15, 5]; // Masses in metric tons (t)
 
 function calculateTotalCargoMass(index) {
-    // 1. BASE CASE: If we've checked every pod index, return a mass of 0
-    if (index >= podWeights.length) {
-        return 0;
-    }
+	// 1. BASE CASE: If we've checked every pod index, return a mass of 0
+	if (index >= podWeights.length) {
+		return 0;
+	}
 
-    // 2. RECURSIVE CASE: Return current mass + the recursive mass of the remaining pods
-    // CRITICAL: We MUST use the 'return' keyword here so the values bubble back up!
-    return podWeights[index] + calculateTotalCargoMass(index + 1);
+	// 2. RECURSIVE CASE: Return current mass + the recursive mass of the remaining pods
+	// CRITICAL: We MUST use the 'return' keyword here so the values bubble back up!
+	return podWeights[index] + calculateTotalCargoMass(index + 1);
 }
 
 // Start calculating from the very first pod (index 0)
 let absoluteTotalMass = calculateTotalCargoMass(0);
-console.log("Total Fleet Cargo Mass: " + absoluteTotalMass + " t"); // 40 t
+console.log(`Total Fleet Cargo Mass: ${absoluteTotalMass} t`); // 40 t
