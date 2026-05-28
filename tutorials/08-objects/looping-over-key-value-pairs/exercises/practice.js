@@ -13,10 +13,13 @@ const stationPingsMs = {
 	baseCidonia: 310,
 };
 
+for (let stationKey in stationPingsMs) {
+console.log(`Connection to ${stationKey} latency is: ${stationPingsMs[stationKey]}ms.`);
+}
 /*
     TODO: Use a 'for...in' loop to iterate through the 'stationPingsMs' object.
     Log a network diagnostic statement for each entry using a template literal:
-    "Connection to [stationKey] latency is: [ping value]ms."
+    "C"
 */
 
 /** EXERCISE 2: WEAPONS INVENTORY VERIFICATION **/
@@ -26,6 +29,17 @@ const pdcAmmoLocker = {
 	bayTwoRails: 150,
 	bridgeDefenses: 0,
 };
+
+let ammoKeys = Object.keys(pdcAmmoLocker);
+for (let keyOfAmmoKeys of ammoKeys) {
+    if (pdcAmmoLocker[keyOfAmmoKeys] === 0) {
+    console.log(`CRITICAL DEPLETION: ${keyOfAmmoKeys} ammo is completely empty!`);
+} else {
+    console.log("Ammo is full");
+}
+}
+
+
 
 /*
     TODO: Use 'Object.keys()' to extract an array of all keys from 'pdcAmmoLocker'.
