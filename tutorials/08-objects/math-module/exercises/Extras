@@ -9,6 +9,12 @@
 
 let fineAdjustmentVector = -14.62;
 
+const CLEAN_STEERING_ANGLE = Math.round(
+    Math.abs(fineAdjustmentVector)
+);
+
+console.log(CLEAN_STEERING_ANGLE);
+
 /*
     TODO: Use 'Math.abs' to extract the absolute value of 'fineAdjustmentVector' 
     (removing the negative sign). 
@@ -19,6 +25,7 @@ let fineAdjustmentVector = -14.62;
 /** EXERCISE 2: SECTOR RANGE SCANNER **/
 
 const cargoBayTemperatures = [18, 22, 14, 31, 19, 25];
+    math.Max(cargoBayTemperatures;
 
 /*
     TODO: Use 'Math.max' along with the spread operator to pull the highest temperature 
