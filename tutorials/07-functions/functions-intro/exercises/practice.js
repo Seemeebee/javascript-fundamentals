@@ -7,15 +7,23 @@
 
 /** EXERCISE 1: THE WELCOME PROTOCOL **/
 
+function greetCrew() {
+    console.log("Welcome back, Captain.");
+}
+
+greetCrew();
+
 /*
-    TODO: Declare a function named 'greetCrew'. Inside the function, 
-    log "Welcome back, Captain." to the console. 
+	TODO: Declare a function named 'greetCrew'. Inside the function, log "Welcome back, Captain." to the console. 
     Then, invoke the function once below its declaration.
-*/
 
 /** EXERCISE 2: LIFE SUPPORT BOOST **/
 
-/*
+function activeOxygenBoost() {
+	console.log("Pumping extra oxygen into sectors A-D... Done.");
+}
+
+/*		
     TODO: Declare a function named 'activateOxygenBoost'. 
     Inside, log "Pumping extra oxygen into sectors A-D... Done."
     Do not call it yet.
@@ -24,6 +32,14 @@
 /** EXERCISE 3: TRIGGERING THE PROTOCOL **/
 
 let crewIsSleepy = true;
+
+function activateOxygenBoost() {
+    console.log("Pumping extra oxygen into sectors A-D... Done.");
+}
+
+if (crewIsSleepy === true) {
+    activateOxygenBoost();
+}
 
 /*
     TODO: Create an 'if' statement that checks if 'crewIsSleepy' 
@@ -40,6 +56,8 @@ function startEngines() {
 function clearLaunchPad() {
 	console.log("Launch pad: CLEARED.");
 }
+clearLaunchPad();
+startEngines();
 
 /*
     TODO: Call 'clearLaunchPad' first, and then call 'startEngines' 
