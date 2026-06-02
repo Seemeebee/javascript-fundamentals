@@ -7,7 +7,10 @@
 
 /** EXERCISE 1: THE DELAYED RADAR PING **/
 
-console.log("Sending outbound radar frequency sweep...");
+const delayedRadarPing = setTimeout (() => {
+    console.log("Sending outbound radar frequency sweep...")
+    console.log("📡 Echo received: Object detected at 12,000km.")
+}, 3000);
 
 /*
     TODO: Use 'setTimeout'. Pass it two arguments:
