@@ -21,6 +21,10 @@ const delayedRadarPing = setTimeout (() => {
 
 /** EXERCISE 2: EMERGENCY KLAXON TIMER **/
 
+const emergencyKlaxon = setTimeout (() => {
+    console.log("🚨 Emergency magnetic shields are now online!")
+}, 1000);
+                                                                 
 console.log("Airlock seal breach detected! Charging secondary containment...");
 
 /*
