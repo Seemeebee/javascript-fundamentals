@@ -13,6 +13,9 @@ const cockpitConsole = {
 	destination: "Tycho Station",
 };
 
+const { vesselSpeed, destination } = cockpitConsole
+console.log(`Passengers are going ${VesselSpeed} and going to ${destination}.`)
+
 /*
     TODO: Use object destructuring to extract 'vesselSpeed' and 'destination' 
     from the 'cockpitConsole' object in a single line. 
@@ -31,6 +34,6 @@ const alienScoutShip = {
     but made a mistake with the variable name. Fix it so it works.
     (Hint: There are two different ways to make this work!)
 */
-const { threat } = alienScoutShip;
+const { threatRating } = alienScoutShip;
 
-console.log(`🚨 Warning: An alien ship was spotted with a ${threat} threat level!`);
+console.log(`🚨 Warning: An alien ship was spotted with a ${threatRating} threat level!`);
